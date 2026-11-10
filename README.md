@@ -8,7 +8,7 @@
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome List" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Cloud-API-Gateway-Integration/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-API-Gateway-Integration?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-API-Gateway-Integration/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-API-Gateway-Integration?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Cloud-API-Gateway-Integration/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Cloud-API-Gateway-Integration?style=social" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
@@ -66,7 +66,7 @@ Below is an enterprise breakdown of leading hosted and cloud-native API manageme
 
 Explore the most popular open-source API gateways, reverse proxies, and integration engines. Projects are sorted in descending order by GitHub stargazer count:
 
-| Project | ⭐ Stars | 📜 License | 📝 Description |
+| Project | ⭐ GitHub_Stars | 📜 License | 📝 Description |
 |---|:---:|:---:|---|
 | **[Traefik Proxy](https://github.com/traefik/traefik)** | [![Stars](https://img.shields.io/github/stars/traefik/traefik?style=social&color=white)](https://github.com/traefik/traefik/stargazers) | MIT | Cloud-native reverse proxy and ingress controller featuring dynamic automatic service discovery from Docker, Kubernetes, and Consul. |
 | **[Kong Gateway](https://github.com/Kong/kong)** | [![Stars](https://img.shields.io/github/stars/Kong/kong?style=social&color=white)](https://github.com/Kong/kong/stargazers) | Apache-2.0 / MPL-2.0 | High-throughput, modular cloud-native API and AI gateway written in Lua/OpenResty with a vast plugin registry. |
