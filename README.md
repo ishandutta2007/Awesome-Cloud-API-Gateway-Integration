@@ -1,32 +1,53 @@
-# Awesome Cloud API Gateway & Integration Ecosystem [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<div align="center">
 
-> A curated list of top **Cloud API Gateways**, **API Management (APIM) Platforms**, and **Open-Source Service Integration Ecosystems** for traffic management, security policy enforcement, rate limiting, and microservices connectivity.
+![Awesome Cloud API Gateway Banner](assets/banner.svg)
 
-API gateways serve as the primary ingress control point for modern distributed architectures and cloud-native applications. They handle critical cross-cutting capabilities such as authentication (OAuth2, OIDC, JWT), TLS termination, dynamic traffic routing, rate limiting, distributed caching, request/response transformation, observability (metrics, logs, traces), and AI/LLM model proxy mediation.
+# 🌐 Awesome Cloud API Gateway & Integration Ecosystem
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome List" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-API-Gateway-Integration/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-API-Gateway-Integration?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-API-Gateway-Integration/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Cloud-API-Gateway-Integration?style=social" alt="GitHub Forks" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+<p align="center">
+  <b>A comprehensive, curated catalog of top-tier Cloud API Gateways, API Management (APIM) Platforms, Reverse Proxies, and Open-Source Service Connectivity Engines.</b>
+</p>
+
+</div>
 
 ---
 
-## Table of Contents
-- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
-- [SaaS & Hosted Cloud API Platforms](#saas--hosted-cloud-api-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [Architecture & Feature Comparison](#architecture--feature-comparison)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
+## 📑 Table of Contents
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS & Hosted Cloud API Platforms](#️-saas--hosted-cloud-api-platforms)
+- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🏛️ Architecture & Feature Comparison](#️-architecture--feature-comparison)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [📈 Star History](#-star-history)
+- [⚠️ Disclaimer](#️-disclaimer)
 
 ---
 
-## Sector Overview & Market Dynamics
+## 📊 Sector Overview & Market Dynamics
 
-The standalone **API Gateway market** is valued at approximately **$3.6 billion** and projected to expand to **$15.6+ billion by the mid-2030s** (~15.6% CAGR), with the broader **API Management & Integration market** encompassing **$8.7B to $10.3B+**. The sector is **moderately concentrated**: hyperscalers (Microsoft Azure, AWS, Google Cloud) and established enterprise software vendors (Salesforce MuleSoft) dominate core enterprise accounts through deeply bundled cloud ecosystems, while specialized vendors and a dynamic, high-growth open-source ecosystem (Kong, Traefik, Apache APISIX, Envoy) capture modern cloud-native, Kubernetes-first, and AI-proxy workloads.
+The standalone **API Gateway market** is valued at approximately **$3.6 billion** and projected to expand to **$15.6+ billion by the mid-2030s** (~15.6% CAGR), with the broader **API Management & Integration market** encompassing **$8.7B to $10.3B+**. 
+
+The sector is **moderately concentrated**:
+- 🏢 **Entrenched Hyperscalers & Enterprise Leaders**: Giants like Microsoft Azure, AWS, Google Cloud (Apigee), and Salesforce (MuleSoft) capture large enterprise core spend by bundling robust API governance into expansive cloud contracts.
+- ⚡ **Dynamic Cloud-Native & Open-Source Innovators**: Specialized vendors and high-velocity open-source projects (Kong, Traefik, Envoy, Apache APISIX) drive developer-led, Kubernetes-first adoption and AI-proxy workload orchestration.
 
 ---
 
-## SaaS & Hosted Cloud API Platforms
+## ☁️ SaaS & Hosted Cloud API Platforms
 
 Below is an enterprise breakdown of leading hosted and cloud-native API management platforms, sorted in descending order by parent company scale (market capitalization / valuation):
 
-| Product | Company Size / Valuation | Description | Pricing (Starting Tier) | Free Tier Limits / Free Trial Plan |
+| Product | 🏢 Company Size / Valuation | 📝 Description | 💳 Pricing (Starting Tier) | 🎁 Free Tier Limits / Free Trial Plan |
 |---|---|---|---|---|
 | **[Azure API Management](https://azure.microsoft.com/en-us/products/api-management/)** | **~$3.1 Trillion** (Microsoft Market Cap) | Scalable multi-cloud API gateway with developer portal, API monetization, and hybrid deployment via self-hosted gateway. | Consumption tier: **$0.0035 per 10,000 calls**; Basic tier from **~$0.07/hour** (~$51/month). | **Free forever**: First 1,000,000 calls/month free in Consumption tier; Developer evaluation tier available. |
 | **[Apigee](https://cloud.google.com/apigee)** | **~$2.2 Trillion** (Alphabet / Google Market Cap) | Enterprise API management platform with advanced traffic analytics, AI proxy governance, API security, and developer portal. | Pay-as-you-go Base Environment starts at **$0.50/hour/region** (~$365/month) + **$20/million API calls**. | **60-day free evaluation plan** with full environment access; no permanent free production tier. |
@@ -41,11 +62,11 @@ Below is an enterprise breakdown of leading hosted and cloud-native API manageme
 
 ---
 
-## Open-Source GitHub Projects
+## 🔓 Open-Source GitHub Projects
 
 Explore the most popular open-source API gateways, reverse proxies, and integration engines. Projects are sorted in descending order by GitHub stargazer count:
 
-| Project | Stars | License | Description |
+| Project | ⭐ Stars | 📜 License | 📝 Description |
 |---|:---:|:---:|---|
 | **[Traefik Proxy](https://github.com/traefik/traefik)** | [![Stars](https://img.shields.io/github/stars/traefik/traefik?style=social&color=white)](https://github.com/traefik/traefik/stargazers) | MIT | Cloud-native reverse proxy and ingress controller featuring dynamic automatic service discovery from Docker, Kubernetes, and Consul. |
 | **[Kong Gateway](https://github.com/Kong/kong)** | [![Stars](https://img.shields.io/github/stars/Kong/kong?style=social&color=white)](https://github.com/Kong/kong/stargazers) | Apache-2.0 / MPL-2.0 | High-throughput, modular cloud-native API and AI gateway written in Lua/OpenResty with a vast plugin registry. |
@@ -62,7 +83,7 @@ Explore the most popular open-source API gateways, reverse proxies, and integrat
 
 ---
 
-## Architecture & Feature Comparison
+## 🏛️ Architecture & Feature Comparison
 
 ```
 +-------------------------------------------------------------------------------+
@@ -84,31 +105,49 @@ Explore the most popular open-source API gateways, reverse proxies, and integrat
 +───────────────────+         +───────────────────+          +──────────────────+
 ```
 
-### Key Selection Criteria
+### 🎯 Key Selection Criteria
 
-- **Throughput & Latency Needs**: Ultra-low latency requirements favor C++ / Rust / Go implementations such as **Envoy Proxy**, **Pingora**, **KrakenD**, or **Traefik**.
-- **Kubernetes Ingress Alignment**: If your architecture runs on K8s and uses standard Gateway API specifications, prioritize **Envoy Gateway**, **Traefik Proxy**, or **Emissary-Ingress**.
-- **Event-Driven & Asynchronous Systems**: If you route Kafka, RabbitMQ, or MQTT messages alongside REST, review **Gravitee.io** or **Apache Camel**.
-- **Managed Hyperscaler Serverless**: If you want zero infrastructure maintenance on native cloud services, select **AWS API Gateway**, **Azure API Management**, or **Apigee**.
+- 🚀 **Throughput & Latency Needs**: Ultra-low latency requirements favor C++ / Rust / Go implementations such as **Envoy Proxy**, **Pingora**, **KrakenD**, or **Traefik**.
+- ☸️ **Kubernetes Ingress Alignment**: If your architecture runs on K8s and uses standard Gateway API specifications, prioritize **Envoy Gateway**, **Traefik Proxy**, or **Emissary-Ingress**.
+- 📨 **Event-Driven & Asynchronous Systems**: If you route Kafka, RabbitMQ, or MQTT messages alongside REST, review **Gravitee.io** or **Apache Camel**.
+- ☁️ **Managed Hyperscaler Serverless**: If you want zero infrastructure maintenance on native cloud services, select **AWS API Gateway**, **Azure API Management**, or **Apigee**.
 
 ---
 
-## How to Contribute
+## 🤝 How to Contribute
 
 We welcome additions, fixes, and updates from the open-source and developer community!
 
-1. **Fork the repository** to your GitHub account.
-2. **Create a descriptive branch**: `git checkout -b add-gateway-platform`.
-3. **Add or update an entry** in `README.md` maintaining the existing tabular schema (including pricing, free limits, and official links).
-4. **Submit a Pull Request** with a concise description of your changes.
+1. 🍴 **Fork the repository** to your GitHub account.
+2. 🌿 **Create a descriptive branch**: `git checkout -b add-gateway-platform`.
+3. 📝 **Add or update an entry** in `README.md` maintaining the existing tabular schema (including pricing, free limits, and official links).
+4. 🚀 **Submit a Pull Request** with a concise description of your changes.
 
 ---
 
-## Disclaimer
+## 💖 Support & Sponsorship
+
+If this curated list helps you architect, benchmark, or deploy API gateways and cloud-native integrations, please consider supporting the project:
+
+- ⭐ **Star this repository** to help others discover it!
+- 🍴 **Fork and contribute** to keep entries fresh and accurate.
+- 📢 **Share with your network** on Twitter/X, LinkedIn, Reddit, or Discord.
+- ☕ **Buy a coffee / Sponsor**: Support ongoing maintenance and curation on the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+##  Star History
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Cloud-API-Gateway-Integration&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Cloud-API-Gateway-Integration&type=date&legend=top-left)
+
+---
+
+## ⚠️ Disclaimer
 
 - This curated repository is maintained for informational and architectural guidance purposes.
 - Product pricing and free tier terms are subject to change by respective cloud and SaaS vendors; refer to the linked official provider pricing sheets before architectural commitment.
 
 ---
 
-**Maintained by the Cloud Infrastructure & Platform Engineering Community.**
+<div align="center">
+  <sub>Maintained with ❤️ by the Cloud Infrastructure & Platform Engineering Community.</sub>
+</div>

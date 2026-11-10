@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Filters for Glow Effects -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Background Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <style>
+    .pulse-orb {
+      animation: pulse 6s ease-in-out infinite alternate;
+    }
+    @keyframes pulse {
+      0% { opacity: 0.3; transform: scale(0.95); }
+      100% { opacity: 0.65; transform: scale(1.1); }
+    }
+
+    .flow-line {
+      stroke-dasharray: 8, 12;
+      animation: dash 15s linear infinite;
+    }
+    @keyframes dash {
+      to {
+        stroke-dashoffset: -200;
+      }
+    }
+
+    .flow-particle {
+      animation: flow 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes flow {
+      0% { transform: translateX(0); opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { transform: translateX(460px); opacity: 0; }
+    }
+
+    .pill-anim {
+      animation: floatPill 5s ease-in-out infinite alternate;
+    }
+    @keyframes floatPill {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-5px); }
+    }
+
+    .text-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .text-subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+    }
+    .badge-text {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11px;
+      font-weight: 600;
+    }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="400" fill="url(#bgGrad)" />
+  <rect width="1200" height="400" fill="url(#grid)" />
+
+  <!-- Dynamic Glowing Ambient Orbs (Background layer) -->
+  <circle cx="150" cy="80" r="140" fill="#6366f1" opacity="0.25" filter="url(#glow)" class="pulse-orb" />
+  <circle cx="1080" cy="320" r="160" fill="#06b6d4" opacity="0.2" filter="url(#glow)" class="pulse-orb" style="animation-delay: -3s;" />
+  <circle cx="950" cy="70" r="110" fill="#a855f7" opacity="0.2" filter="url(#glow)" class="pulse-orb" style="animation-delay: -1.5s;" />
+
+  <!-- Dynamic Animated Circuit/Mesh Lines (Behind Foreground Content) -->
+  <g opacity="0.35">
+    <path d="M 0 100 Q 300 130 600 70 T 1200 110" fill="none" stroke="#6366f1" stroke-width="1.5" class="flow-line" />
+    <path d="M 0 320 Q 400 270 800 330 T 1200 290" fill="none" stroke="#06b6d4" stroke-width="1.5" class="flow-line" style="animation-direction: reverse; animation-duration: 20s;" />
+    <path d="M 100 0 Q 250 200 150 400" fill="none" stroke="#8b5cf6" stroke-width="1" class="flow-line" style="animation-duration: 25s;" />
+    <path d="M 1050 0 Q 950 200 1100 400" fill="none" stroke="#3b82f6" stroke-width="1" class="flow-line" style="animation-duration: 22s;" />
+  </g>
+
+  <!-- Animated Data Traffic Stream Graphic (Lower Center/Right Background) -->
+  <g transform="translate(370, 310)" opacity="0.8">
+    <line x1="0" y1="0" x2="460" y2="0" stroke="#334155" stroke-width="2" stroke-dasharray="4,4" />
+    <circle cx="0" cy="0" r="4.5" fill="#38bdf8" class="flow-particle" filter="url(#nodeGlow)" />
+    <circle cx="0" cy="0" r="3.5" fill="#818cf8" class="flow-particle" filter="url(#nodeGlow)" style="animation-delay: 1.3s;" />
+    <circle cx="0" cy="0" r="4" fill="#34d399" class="flow-particle" filter="url(#nodeGlow)" style="animation-delay: 2.7s;" />
+  </g>
+
+  <!-- High-Tech Border Outline -->
+  <rect x="15" y="15" width="1170" height="370" rx="16" fill="none" stroke="url(#accentGlow)" stroke-width="1" stroke-opacity="0.35" />
+
+  <!-- Decorative Corner Accents -->
+  <path d="M 15 45 L 15 15 L 45 15" fill="none" stroke="#8b5cf6" stroke-width="2.5" />
+  <path d="M 1185 45 L 1185 15 L 1155 15" fill="none" stroke="#8b5cf6" stroke-width="2.5" />
+  <path d="M 15 355 L 15 385 L 45 385" fill="none" stroke="#06b6d4" stroke-width="2.5" />
+  <path d="M 1185 355 L 1185 385 L 1155 385" fill="none" stroke="#06b6d4" stroke-width="2.5" />
+
+  <!-- ================= FOREGROUND CONTENT ================= -->
+
+  <!-- Top Pill Badges (Dynamic Floating) -->
+  <g class="pill-anim" transform="translate(0, 0)">
+    <!-- Pill 1: Ecosystem -->
+    <g transform="translate(360, 52)">
+      <rect width="135" height="26" rx="13" fill="#1e293b" stroke="#3b82f6" stroke-opacity="0.6" stroke-width="1" />
+      <circle cx="14" cy="13" r="4" fill="#3b82f6" />
+      <text x="26" y="17" fill="#93c5fd" class="badge-text">CLOUD-NATIVE</text>
+    </g>
+
+    <!-- Pill 2: Ingress & APIM -->
+    <g transform="translate(510, 52)">
+      <rect width="180" height="26" rx="13" fill="#1e293b" stroke="#8b5cf6" stroke-opacity="0.6" stroke-width="1" />
+      <circle cx="14" cy="13" r="4" fill="#a855f7" />
+      <text x="26" y="17" fill="#d8b4fe" class="badge-text">API GATEWAY &amp; APIM</text>
+    </g>
+
+    <!-- Pill 3: OSS & SaaS -->
+    <g transform="translate(705, 52)">
+      <rect width="135" height="26" rx="13" fill="#1e293b" stroke="#10b981" stroke-opacity="0.6" stroke-width="1" />
+      <circle cx="14" cy="13" r="4" fill="#10b981" />
+      <text x="26" y="17" fill="#6ee7b7" class="badge-text">OPEN ECOSYSTEM</text>
+    </g>
+  </g>
+
+  <!-- Center Title (Solid High-Contrast Gradient Fill in Foreground) -->
+  <text x="600" y="150" text-anchor="middle" fill="url(#accentGlow)" class="text-title" font-size="44" filter="url(#glow)">
+    Awesome Cloud API Gateway
+  </text>
+  <text x="600" y="150" text-anchor="middle" fill="#ffffff" class="text-title" font-size="44">
+    Awesome Cloud API Gateway
+  </text>
+
+  <!-- Center Title Line 2 -->
+  <text x="600" y="200" text-anchor="middle" fill="#f8fafc" class="text-title" font-size="34">
+    &amp; Integration Ecosystem
+  </text>
+
+  <!-- Subtitle (Clear, readable, high contrast) -->
+  <text x="600" y="246" text-anchor="middle" fill="#94a3b8" class="text-subtitle" font-size="16">
+    Curated Collection of Cloud API Gateways, Ingress Controllers, APIM Suites &amp; Microservice Integration
+  </text>
+
+  <!-- Bottom Capability Pills -->
+  <g transform="translate(190, 275)">
+    <rect x="0" y="0" width="135" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="67" y="18" text-anchor="middle" fill="#cbd5e1" class="badge-text">⚡ Traffic Routing</text>
+
+    <rect x="150" y="0" width="135" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="217" y="18" text-anchor="middle" fill="#cbd5e1" class="badge-text">🛡️ Security &amp; Auth</text>
+
+    <rect x="300" y="0" width="135" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="367" y="18" text-anchor="middle" fill="#cbd5e1" class="badge-text">⏱️ Rate Limiting</text>
+
+    <rect x="450" y="0" width="135" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="517" y="18" text-anchor="middle" fill="#cbd5e1" class="badge-text">🤖 AI / LLM Proxies</text>
+
+    <rect x="600" y="0" width="135" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="667" y="18" text-anchor="middle" fill="#cbd5e1" class="badge-text">📊 Observability</text>
+
+    <rect x="750" y="0" width="135" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="817" y="18" text-anchor="middle" fill="#cbd5e1" class="badge-text">🔄 Async / Events</text>
+  </g>
+</svg>
