@@ -1,6 +1,6 @@
 # Awesome-Cloud-API-Gateway-Integration
 
-# Top Cloud API Gateway & Integration Ecosystem
+## Top Cloud API Gateway & Integration Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on API Traffic Management, Security Policy Enforcement & Service Connectivity*  
